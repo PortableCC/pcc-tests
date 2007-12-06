@@ -1,0 +1,43 @@
+char sc1;
+unsigned char uc1;
+short ss1;
+unsigned short us1;
+int si1;
+unsigned int ui1;
+long sl1;
+unsigned long ul1;
+long long sll1;
+unsigned long long ull1;
+
+static char sc2;
+static unsigned char uc2;
+static short ss2;
+static unsigned short us2;
+static int si2;
+static unsigned int ui2;
+static long sl2;
+static unsigned long ul2;
+static long long sll2;
+static unsigned long long ull2;
+
+char sc3 = 1;
+unsigned char uc3 = 2;
+short ss3 = 3;
+unsigned short us3 = 4;
+int si3 = 5;
+unsigned int ui3 = 6;
+long sl3 = 7;
+unsigned long ul3 = 8;
+long long sll3 = 9;
+unsigned long long ull3 = 10;
+
+static char sc4 = 11;
+static unsigned char uc4 = 12;
+static short ss4 = 13;
+static unsigned short us4 = 14;
+static int si4 = 15;
+static unsigned int ui4 = 16;
+static long sl4 = 17;
+static unsigned long ul4 = 18;
+static long long sll4 = 19;
+static unsigned long long ull4 = 20;;
