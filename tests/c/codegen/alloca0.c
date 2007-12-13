@@ -1,11 +1,12 @@
+#include <stdlib.h>
+
 int
 test()
 {
-	char buf[65537];
+	char *buf = alloca(65536);
 	return 42;
 }
 
-int
 main()
 {
 	return test();
