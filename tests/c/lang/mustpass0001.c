@@ -1,7 +1,9 @@
 typedef int a;
 
-void
-f(void)
+int
+main(void)
 {
 	struct x { int a; } a;
+
+	return 0;
 }
