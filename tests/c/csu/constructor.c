@@ -1,15 +1,13 @@
-/*
- * Currently only compiles with gcc
- */
-
 #include <stdio.h>
 
-#ifdef __PCC__
-#define __constructor _Pragma("constructor")
-#define __destructor _Pragma("destructor")
-#else
+#if defined(__PCC__)
+#define __constructor _Pragma("init")
+#define __destructor _Pragma("fini")
+#elif defined(__GNUC__)
 #define __constructor __attribute ((constructor))
 #define __destructor __attribute ((destructor))
+#else
+#error which compiler?
 #endif
 
 void __constructor
