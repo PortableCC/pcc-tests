@@ -2,24 +2,26 @@
 #include <stdio.h>
 
 #ifdef __PCC__
-#define __packed _Pragma("packed")
+//#define __packed _Pragma("packed")
+#define __packed __attribute__((packed))
 #else
 #define __packed __attribute__((packed))
 #endif
 
 #define STRUCT(prefix, name, type)		\
 struct {					\
-	type name;				\
+	type field;				\
 } prefix name
 
 #define STRUCTP(prefix, name, type, type2)	\
 struct {					\
 	type2 pad;				\
-	type name;				\
+	type field;				\
 } prefix name
 
-#define INFO(name)				\
-	printf("sizeof(" #name ") = %d\n", sizeof(name))
+#define INFO(name)						\
+	printf("sizeof(" #name ") = %d, offsetof(filed)=%d\n",	\
+		sizeof(name), (int)((char *)&name.field - (char *)&name))
 
 #define STRUCT0(name, type)			\
 	STRUCT(, name, type);			\
@@ -68,18 +70,21 @@ _STRUCT(float_ptr_st, float*);
 _STRUCT(double_ptr_st, double*);
 _STRUCT(ldouble_ptr_st, long double*);
 
+#define SIZE(name)						\
+	printf("sizeof(" #name ") = %d\n", sizeof(name))
+
 int
 main(void)
 {
-	INFO(bool);
-	INFO(char);
-	INFO(short);
-	INFO(int);
-	INFO(long);
-	INFO(long long);
-	INFO(float);
-	INFO(double);
-	INFO(long double);
+	SIZE(bool);
+	SIZE(char);
+	SIZE(short);
+	SIZE(int);
+	SIZE(long);
+	SIZE(long long);
+	SIZE(float);
+	SIZE(double);
+	SIZE(long double);
 
 	_INFO(bool_st);
 	_INFO(char_st);
