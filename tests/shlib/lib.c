@@ -5,8 +5,8 @@
 #define __constructor _Pragma("constructor")
 #define __destructor _Pragma("destructor")
 #elif defined(__GNUC__)
-#define __constructor __attribute__(constructor)
-#define __destructor __attribute__(destructor)
+#define __constructor __attribute__((constructor))
+#define __destructor __attribute__((destructor))
 #endif
 
 void __constructor
