@@ -3,11 +3,17 @@
  */
 #include <stdio.h>
 
+#ifdef WIN32
+#define FMT	"%I64x"
+#else
+#define FMT	"%llx"
+#endif
+
 #define EQUAL(x,y)							\
 do {									\
 	printf("line %d\n", __LINE__);					\
 	if ((x) != (y))							\
-		printf("FAILED: 0x%llx != 0x%llx\n", (x), (y));		\
+		printf("FAILED: 0x" FMT " != 0x" FMT "\n", (x), (y));		\
 } while(0)
 
 long long __adddi3(long long, long long);
@@ -40,6 +46,7 @@ long long __xordi3(long long, long long);
 int
 main(void)
 {
+	unsigned long long v;
 #ifdef NOT_IMPLEMENTED
 	EQUAL(__adddi3(0x1000000000000002LL, 0x2000000000000003LL),
 		0x3000000000000005LL);
@@ -91,7 +98,6 @@ main(void)
 	EQUAL(__umoddi3(0x800000000000003LL, 0x0000000000000003LL),
 		0x2LL);
 
-	unsigned long long v;
 	EQUAL(__qdivrem(0x8000000000000003LL, 0x100000000000003LL, &v),
 		0x7fL);
 	printf("v=0x%llx\n", v);
