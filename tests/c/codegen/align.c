@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 #ifdef __PCC__
-//#define __packed _Pragma("packed")
-#define __packed __attribute__((packed))
+#define __packed _Pragma("packed")
+//#define __packed __attribute((packed))
 #else
 #define __packed __attribute__((packed))
 #endif
