@@ -1,11 +1,19 @@
+#ifdef NOBOOL
+typedef char bool;
+#define true 1
+#define false 0
+#else
 #include <stdbool.h>
+#endif
 #include <stdio.h>
 
-#ifdef __PCC__
-#define __packed _Pragma("packed")
-//#define __packed __attribute((packed))
+#if defined(__PCC__)
+//#define __packed _Pragma("packed")
+#define __packed __attribute((packed))
+#elif defined(__GNUC__)
+#define __packed __attribute((packed))
 #else
-#define __packed __attribute__((packed))
+#define __packed
 #endif
 
 #define STRUCT(prefix, name, type)		\
