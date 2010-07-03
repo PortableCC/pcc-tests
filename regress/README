@@ -1,0 +1,5 @@
+This directory contain regression tests for pcc compiler. 
+
+test with:
+$ make test
+
