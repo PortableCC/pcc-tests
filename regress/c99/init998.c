@@ -1,4 +1,4 @@
-/* from pcc-list, confirmed as 'pcc bug' and fixed by reggie  
+/* from pcc-list, confirmed as 'pcc bug' and fixed by ragge  
  * pcc takes max resources - this can slow down or even crash your system 
  * have been warned */
 int main(){

@@ -50,7 +50,27 @@ test:
 		echo "failed" || echo "passed" 
 .endfor
 
+page:
+	@printf  "<h2> C99 tests </h2> \n" > c99.log
+	@printf  "<table width="300"> \n<tr><th>Test</th><th>Result</th></tr> \n" >> c99.log
+.for TARGET in ${REGRESS_TARGETS}
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "${TARGET}" >> c99.log
+	@${CC} ${CFLAGS} -o ${TARGET}.out ${TARGET}.c 2>/dev/null && \
+		./${TARGET}.out >/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> c99.log || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> c99.log 
+.endfor
+.for TARGET2 in ${REGRESS_TARGETS_FAIL}
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "${TARGET2}" >> c99.log
+	@${CC} ${CFLAGS} -o ${TARGET2}.out ${TARGET2}.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> c99.log || \
+		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> c99.log  
+.endfor
+	@printf "</table>\n" >> c99.log 
+
 clean:
 	/bin/rm -rf *.out 
 	/bin/rm -rf *.core
+	/bin/rm -rf c99.log 
+
 
