@@ -38,34 +38,40 @@ REGRESS_TARGETS_FAIL = arith999 \
 
 test:  
 	@echo " Running C99 tests: "  
-.for TARGET in ${REGRESS_TARGETS}
-	@printf  "   %-20s \t\t " "${TARGET}"
-	@${CC} ${CFLAGS} -o ${TARGET}.out ${TARGET}.c 2>/dev/null && \
-		./${TARGET}.out >/dev/null && \
-		echo "passed" || echo "failed"
-.endfor
-.for TARGET2 in ${REGRESS_TARGETS_FAIL}
-	@printf  "   %-20s \t\t " "${TARGET2}"
-	@${CC} ${CFLAGS} -o ${TARGET2}.out ${TARGET2}.c 2>/dev/null && \
-		echo "failed" || echo "passed" 
-.endfor
+	@for TARGET in ${REGRESS_TARGETS} ;\
+	do \
+		printf  "   %-20s \t\t " "$$TARGET" ;\
+		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
+			./$$TARGET.out >/dev/null && \
+			echo "passed" || echo "failed" ;\
+	done 
+	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
+	do \
+		printf  "   %-20s \t\t " "$$TARGET2" ;\
+		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
+			./$$TARGET2.out >/dev/null && \
+			echo "failed" || echo "passed" ;\
+	done 
+
 
 page:
 	@printf  "<h2> C99 tests </h2> \n" > c99.log
 	@printf  "<table width="300"> \n<tr><th>Test</th><th>Result</th></tr> \n" >> c99.log
-.for TARGET in ${REGRESS_TARGETS}
-	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "${TARGET}" >> c99.log
-	@${CC} ${CFLAGS} -o ${TARGET}.out ${TARGET}.c 2>/dev/null && \
-		./${TARGET}.out >/dev/null && \
-		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> c99.log || \
-		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> c99.log 
-.endfor
-.for TARGET2 in ${REGRESS_TARGETS_FAIL}
-	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "${TARGET2}" >> c99.log
-	@${CC} ${CFLAGS} -o ${TARGET2}.out ${TARGET2}.c 2>/dev/null && \
-		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> c99.log || \
-		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> c99.log  
-.endfor
+	@for TARGET in ${REGRESS_TARGETS} ;\
+	do \
+		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "$$TARGET" >> c99.log;\
+		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
+			./$$TARGET.out >/dev/null && \
+			printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> c99.log || \
+			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> c99.log ;\
+	done
+	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
+	do \
+		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "$$TARGET2" >> c99.log;\
+		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
+			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> c99.log || \
+			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> c99.log ;\
+	done
 	@printf "</table>\n" >> c99.log 
 
 clean:
