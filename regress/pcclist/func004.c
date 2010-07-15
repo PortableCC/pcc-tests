@@ -1,4 +1,11 @@
-/*correct - from pcc-list */
+/*
+ * pcc-bug
+ * 
+ * Subject:    Declaring a pointer to array using a variable for array
+ * size.
+ * From:       Jesus Sanchez <zexel_ut () hotmail ! com>
+ *
+ * */
 #include <stdio.h>
 
 int main(){

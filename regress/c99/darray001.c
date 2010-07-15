@@ -1,9 +1,9 @@
-/* should not issue: darray001.c, line 6: compiler error: bad conversion */
-/* From TAKAHASHI Tamotsu */
-int main(void) {
-        int n=1;
-        int a[1][n];
-        a[0][0]=1; /* this line */
-        return 0;
-}
+/* Array declarations may have a '*' between the square brackets (used
+ * for variable arrays in parameter lists). 
+ */
+int main(int *argc, char **argv)
+{
+	int array[*] = {1, 1, 1} ;
 
+	return 0; 
+}

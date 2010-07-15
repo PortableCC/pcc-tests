@@ -1,10 +1,11 @@
-/* 
- * From OBSD 
- *
- * extra braces, should not cause internal compiler error 
- * */
-struct a {
-	int i;
-} *p = { { 0 } };
+/* Correct - from c99 */
+int main(int *argc, char **argv)
+{
+	enum {one, two} ; 
+	const char *a[] = {
+		[two] = "2222";
+		[one] = "1111";
+	};
 
-int main() {return 0;}
+	return 0; 
+}

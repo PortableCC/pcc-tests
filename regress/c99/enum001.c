@@ -1,27 +1,10 @@
-/* Found in OBSD sources */
-/* code should produce exactly one warning */
+typedef int a;
+typedef int b;
 
-enum foo { bar };
-enum footoo { bar1 };
-
-enum foo f(void) { return bar; }
-double g(void) { return 0.0; }
-
-struct baz {
-	enum foo (*ff)(void);
-};
-
-struct baz a[] = { {f},
-	{g} };
-
-
-static int h(enum foo *);
-static int h(enum foo *arg)
+int
+main(void)
 {
-	return 0;
-}
+	enum a { a = 1, b = a + 2, c = a + b + 3 };
 
-int main()
-{
 	return 0;
 }

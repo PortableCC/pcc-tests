@@ -1,10 +1,35 @@
-/* It seems that this is a language problem */
-int main(int *argc, char **argv)
-{
-	int a = 1, b = 2, c; 
-	int x = 2, *y = 2, z; 
+/* IEEE-754 floating-point arithmetic */
 
-	c=a+++++b ; /* a++ + ++b*/
-	z=x/*y ; 
-	return 0; 
+#include <stdio.h>
+#include <math.h>
+
+int main(int *argc,char **argv)
+{
+	double f1 = 1/0.0, 
+			f2 = -1/0.0, 
+			f3 = 0.0/0.0, 
+			f4 = sqrt(-1.0),
+			f5 = INFINITY/INFINITY ;
+
+	//printf("f1:%f\n",f1);
+	if ( f1 != INFINITY )
+		return 1; 
+
+	//printf("f2:%f\n",f2);
+	if ( f2 != -INFINITY )
+		return 2; 
+
+	//printf("f3:%f\n",f3);
+	if ( ! isnan(f3) )
+		return 3; 
+	
+	//printf("f4:%f\n",f4);
+	if ( ! isnan(f4) )
+		return 4; 
+	
+	//printf("f5:%f\n",f5);
+	if ( ! isnan(f5) )
+		return 5; 
+
+	return 0;
 }

@@ -5,7 +5,8 @@ int main()
 	int a ;
 
 	a++ ;
-#line 12345 
+#line 2147483000 
+/* max 2147483647 */
 	if ( __LINE__ < 50) 
 		return 1;
 

@@ -1,16 +1,14 @@
-/* found in OpenBSD sources */
-int main(int *argc,char *argv[])
+/* C99 use truncation towards 0 */
+int main(int *argc,char **argv)
 {
-	long long foo = 10;
-	unsigned int d = 0xffffffffUL;
+   int a = -22 / 7 ;
+	int b = -22 % 7 ;
 
-	if (foo + d != 0x100000009LL)
-		return 1;
+	if (a != -3 )
+		return 1; 
+		
+	if (b != -1 )
+		return 2; 
 
-	foo += d;
-	if (foo != 0x100000009LL)
-		return 2;
-	
 	return 0;
 }
-

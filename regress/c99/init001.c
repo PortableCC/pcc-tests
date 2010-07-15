@@ -1,16 +1,13 @@
-/* Based on OpenBSD PR 5586 from TAKAHASHI Tamotsu */
+/* Correct */
+union un1 {
+	short int a ;
+	int b;
+	long int c; 
+	float d; 
+	double e; 
+} u = { .b = 1 } ; 
 
-struct s {
-	int f;
-	int g[1][1];
-};
-
-struct s v = { 0x99, {{0x100}} };
-
-int
-main()
+int main(int *argc, char **argv)
 {
-	if (v.f != 0x99)
-		errx(1, "wrong");
-	return 0;
+	return 0; 
 }

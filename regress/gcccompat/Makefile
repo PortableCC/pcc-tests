@@ -6,8 +6,10 @@
 CC=pcc
 CFLAGS= 
 LDFLAGS=
+LOG=gcccompat.log
 
-REGRESS_TARGETS = gcccompat001 
+REGRESS_TARGETS = attribute001 attribute002 \
+						extension001 extension002 
 
 REGRESS_TARGETS_FAIL = 
 
@@ -24,35 +26,34 @@ test:
 	do \
 		printf  "   %-20s \t\t " "$$TARGET2" ;\
 		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
-			./$$TARGET2.out >/dev/null && \
 			echo "failed" || echo "passed" ;\
 	done 
 
 
 page:
-	@printf  "<h2> gcc compatibility tests </h2> \n" > gcccompat.log
-	@printf  "<table width="300"> \n<tr><th>Test</th><th>Result</th></tr> \n" >> gcccompat.log
+	@printf  "<h2> gcc compatibility tests </h2> \n" > ${LOG}
+	@printf  "<table width="300"> \n<tr><th>Test</th><th>Result</th></tr> \n" >> ${LOG}
 	@for TARGET in ${REGRESS_TARGETS} ;\
 	do \
-		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " $$TARGET " >> gcccompat.log ;\
+		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " $$TARGET " >> ${LOG} ;\
 		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
 			./$$TARGET.out >/dev/null && \
-			printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> gcccompat.log || \
-			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> gcccompat.log ;\
+			printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;\
 	done
 	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
 	do \
-		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "$$TARGET2" >> gcccompat.log ;\
+		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "$$TARGET2" >> ${LOG} ;\
 		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
-			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> gcccompat.log || \
-			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> gcccompat.log  ;\
+			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
+			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG}  ;\
 	done
-	@printf "</table>\n" >> gcccompat.log 
+	@printf "</table>\n" >> ${LOG}
 
 
 
 clean:
 	/bin/rm -rf *.out 
 	/bin/rm -rf *.core
-	/bin/rm -rf gcccompat.log
+	/bin/rm -rf ${LOG}
 

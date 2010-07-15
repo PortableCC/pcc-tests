@@ -15,6 +15,8 @@ int main(int *argc, char **argv)
 	unsigned long int u4 ; 
 	unsigned long long int u5 ;
 
+	long long l1 ;
+
 	float f1; 
 	double f2;
 	long double f3; 
