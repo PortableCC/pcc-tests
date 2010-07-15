@@ -50,6 +50,9 @@ test:
 		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
 			echo "failed" || echo "passed" ;\
 	done 
+	@printf  "   %-20s \t\t " "inline999" ;
+	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
+		echo "failed" || echo "passed" ;\
 
 
 page:
@@ -70,6 +73,10 @@ page:
 			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
 			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;\
 	done
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "inline999" >> ${LOG};
+	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;
 	@printf "</table>\n" >> ${LOG}
 
 clean:

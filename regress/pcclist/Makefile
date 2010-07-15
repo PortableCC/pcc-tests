@@ -8,17 +8,17 @@ CFLAGS=
 LDFLAGS=
 LOG=pcclist.log
 
-REGRESS_TARGETS = basic001 basic002 basic003 \
+REGRESS_TARGETS = basic001 basic003 \
 						fields001 fields002 \
-						func001 func002 func003 func004 func005 \
-						init001 init002 init003 init004 init005 \
+						func003 func004 func005 \
+						init001 init003 init004 init005 \
 						init006 init007 init008 \
 						prep001 \
 						scope001 \
 						strings001 strings002 \
 						types001 types002
 
-REGRESS_TARGETS_FAIL = init999 init998 init997 
+REGRESS_TARGETS_FAIL = func999 init999 init998 init997 
 
 test:  
 	@echo " Running tests from pcc-list: "  
@@ -35,6 +35,18 @@ test:
 		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
 			echo "failed" || echo "passed" ;\
 	done 
+	@printf  "   %-20s \t\t " "basic002" ;
+	@${CC} ${CFLAGS} -fpic -O -S -o basic002.out basic002.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "func001" ;
+	@${CC} ${CFLAGS} -Wc,-xtemps,-xinline -o func001.out func001.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "func002" ;
+	@${CC} ${CFLAGS} --fatal-warnings -o func002.out func002.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "init002" ;
+	@${CC} ${CFLAGS} -fPIC -fstack-protector -o init002.out init002.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
 
 
 page:
@@ -55,6 +67,22 @@ page:
 			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
 			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG}  ;\
 	done
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " basic002 " >> ${LOG} ;
+	@${CC} ${CFLAGS} -fpic -O -S -o basic002.out basic002.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func001 " >> ${LOG} ;
+	@${CC} ${CFLAGS} -Wc,-xtemps,-xinline -o func001.out func001.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func002 " >> ${LOG} ;
+	@${CC} ${CFLAGS} --fatal-warnings -o func002.out func002.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " init002 " >> ${LOG} ;
+	@${CC} ${CFLAGS} -fPIC -fstack-protector -o init002.out init002.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf "</table>\n" >> ${LOG}
 
 
