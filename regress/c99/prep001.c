@@ -1,4 +1,4 @@
-/*correct - from c99 */
+/* c99 6.4.2.2 */
 int main(){
 	char t[255]; 
 	

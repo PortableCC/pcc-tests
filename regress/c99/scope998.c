@@ -1,4 +1,5 @@
-/* this should fail */
+/* this should fail 
+ * C99 6.5.2.3 */
 struct st1 { int a ;}
 struct st2 { int b ;}
 

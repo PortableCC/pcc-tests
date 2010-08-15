@@ -1,4 +1,4 @@
-/* correct */
+/* correct c99 6.5.2.5 */
 
 int main(int *argc, char **argv)
 {

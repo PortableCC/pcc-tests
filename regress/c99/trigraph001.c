@@ -1,5 +1,5 @@
 /* 
- * pain for my eyes ;)  
+ * C99 5.2.1.1 
  */
 
 ??=define AAA 1 
