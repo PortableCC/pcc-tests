@@ -26,8 +26,9 @@ REGRESS_TARGETS = arith001 arith002 \
 						scope001 scope002 scope003 scope004 \
 						trigraph001 \
 						types001 types002 types003 types004 types005 \
-						types006 types007 \
-						limits001 limits002 limits003 
+						types006 types007 types008 \
+						limits001 limits002 limits003 \
+						sizeof001 sizeof002 
 
 
 REGRESS_TARGETS_FAIL = arith999 \
