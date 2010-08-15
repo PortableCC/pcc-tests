@@ -36,7 +36,7 @@ test:
 	@${CC} ${CFLAGS} -o PCC-70.out -c PCC-70.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "PCC-159" ;
-	@${CC} ${CFLAGS} -o PCC-159 -c PCC-159.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -o PCC-159.out -c PCC-159.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
 
 

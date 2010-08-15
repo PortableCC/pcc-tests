@@ -10,6 +10,7 @@ LOG=c99.log
 
 REGRESS_TARGETS = arith001 arith002 \
 						basic001 basic002 basic003 basic004 basic005 \
+						basic006 basic007 \
 						comments001 \
 						conversions001 \
 						darray001 darray002 \
@@ -18,19 +19,22 @@ REGRESS_TARGETS = arith001 arith002 \
 						func001 func002 func003 \
 						init001 init002 init003 init004 init005 init006 \
 						init007 init008 init009 init010 init011 init012 \
+						init013 init014 init015 \
 						inline001  \
-						oper001 oper002 \
+						oper001 oper002 oper003 \
 						prep001 prep002 prep003 prep004 prep005 prep006 \
 						scope001 scope002 scope003 scope004 \
 						trigraph001 \
-						types001 types002 types003 \
-						limits001 limits002 
+						types001 types002 types003 types004 types005 \
+						types006 types007 \
+						limits001 limits002 limits003 
 
 
 REGRESS_TARGETS_FAIL = arith999 \
 						comments999 comments998 \
 						const999 const998 const997 \
 						func999 func998 func997 func996 \
+						init999 \
 						oper999 \
 						prep999 \
 						scope999	scope998 scope997 scope996 
