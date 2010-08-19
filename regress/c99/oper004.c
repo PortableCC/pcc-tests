@@ -1,4 +1,4 @@
-/* incorrect - from C99  */ 
+/* C99 6.5.17 */ 
 int foo(int x,int y, int z){
 	return 1;
 }
@@ -9,8 +9,7 @@ int main(int *argc, char **argv)
 		 b = 1,
 		 c = 1;  
 
-	foo(a, b=5, b++, c);		// comma is not allowed here
-									// C99 
+	foo(a, (b=5, b++), c);	// (b=5,b++) - one argument with val=6
 
 	return 1; 
 }

@@ -21,7 +21,7 @@ REGRESS_TARGETS = arith001 arith002 \
 						init007 init008 init009 init010 init011 init012 \
 						init013 init014 init015 \
 						inline001  \
-						oper001 oper002 oper003 \
+						oper001 oper002 oper003 oper004 \
 						prep001 prep002 prep003 prep004 prep005 prep006 \
 						scope001 scope002 scope003 scope004 \
 						trigraph001 \
@@ -38,7 +38,8 @@ REGRESS_TARGETS_FAIL = arith999 \
 						init999 \
 						oper999 \
 						prep999 \
-						scope999	scope998 scope997 scope996 
+						scope999	scope998 scope997 scope996 \
+						types999 types998 types997 types996 
 
 test:  
 	@echo " Running C99 tests: " 
