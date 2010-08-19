@@ -1,4 +1,4 @@
-/*correct*/
+/* C99 6.7.7*/
 typedef signed int T1; 
 typedef int T2; 
 

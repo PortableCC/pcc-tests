@@ -16,13 +16,14 @@ REGRESS_TARGETS = arith001 arith002 \
 						darray001 darray002 \
 						digraph001 \
 						enum001 \
-						func001 func002 func003 \
+						func001 func002 func003 func004 \
 						init001 init002 init003 init004 init005 init006 \
 						init007 init008 init009 init010 init011 init012 \
-						init013 init014 init015 \
+						init013 init014 init015 init016 \
 						inline001  \
 						oper001 oper002 oper003 oper004 \
 						prep001 prep002 prep003 prep004 prep005 prep006 \
+						prep007 prep008 \
 						scope001 scope002 scope003 scope004 \
 						trigraph001 \
 						types001 types002 types003 types004 types005 \
@@ -34,10 +35,10 @@ REGRESS_TARGETS = arith001 arith002 \
 REGRESS_TARGETS_FAIL = arith999 \
 						comments999 comments998 \
 						const999 const998 const997 \
-						func999 func998 func997 func996 \
-						init999 \
+						func999 func998 func997 func996 func995 \
+						init999 init998 \
 						oper999 \
-						prep999 \
+						prep999 prep998 \
 						scope999	scope998 scope997 scope996 \
 						types999 types998 types997 types996 
 

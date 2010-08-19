@@ -1,4 +1,4 @@
-/*incorrect - from c99 */
+/* c99 6.7.3.1 */
 struct st {
 	int a ;
 	const char b ;
