@@ -19,7 +19,7 @@ REGRESS_TARGETS = arith001 arith002 \
 						func001 func002 func003 func004 \
 						init001 init002 init003 init004 init005 init006 \
 						init007 init008 init009 init010 init011 init012 \
-						init013 init014 init015 init016 \
+						init013 init014 init015 init016 init017 init018 \
 						inline001  \
 						oper001 oper002 oper003 oper004 \
 						prep001 prep002 prep003 prep004 prep005 prep006 \

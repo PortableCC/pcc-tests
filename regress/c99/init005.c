@@ -1,4 +1,4 @@
-/*correct*/
+/* C99 6.7.8 */
 int main(int *argc, char **argv)
 {
 	int A[] = {1,2,3,4}; 
