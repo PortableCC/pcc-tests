@@ -6,8 +6,9 @@ int main()
 	int b[6] = { 0,1,2,3, [2] = 22,33,44,55 } ; // overrriding first values
 
 	if (a[6] !=0 )
-		return 1; 
-	if (a[2] != 22 )
+		return 1;
+
+	if (b[2] != 22 )
 		return 2; 
 
 	return 0; 
