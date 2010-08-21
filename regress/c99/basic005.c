@@ -1,4 +1,5 @@
 /* C99 5.1.2.2.1 */ 
+#include <stdio.h>
 int main(int argc, char **argv){
 	if(argc < 1)
 		return 1; 
