@@ -8,15 +8,15 @@ test:
 	@${MAKE} shared_check  
 
 combined:
-	@${CC} -o combined main.c lib.c
+	@${CC} -o combined main.c lib.c >/dev/null 2>/dev/null
 
 combined_check: 
 	@${MAKE} combined
-	@./combined >/dev/null
+	@./combined >/dev/null 2>/dev/null
 
 static_lib:
 	@$(CC) -c lib.c
-	@ar r lib.a lib.o 2>/dev/null 
+	@ar r lib.a lib.o >/dev/null 2>/dev/null 
 
 static:	
 	@${MAKE} static_lib

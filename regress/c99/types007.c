@@ -8,4 +8,5 @@ int main ()
 	b = (void *) a; 
 	a = (int *) b;  
 
+	return 0; 
 }

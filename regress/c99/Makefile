@@ -10,7 +10,7 @@ LOG=c99.log
 
 REGRESS_TARGETS = arith001 arith002 \
 						basic001 basic002 basic003 basic004 basic005 \
-						basic006 basic007 \
+						basic007 \
 						comments001 \
 						conversions001 \
 						darray001 darray002 \
@@ -57,9 +57,13 @@ test:
 		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
 			echo "failed" || echo "passed" ;\
 	done 
+	@printf  "   %-20s \t\t " "basic006" ;
+	@${CC} ${CFLAGS} -o basic006.out basic006.c 2>/dev/null && \
+		./basic006.out param1 PARAM2 Param3 >/dev/null && \
+		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "inline999" ;
 	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
-		echo "failed" || echo "passed" ;\
+		echo "failed" || echo "passed" ;
 
 
 page:
@@ -80,6 +84,11 @@ page:
 			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
 			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;\
 	done
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "basic006" >> ${LOG};
+	@${CC} ${CFLAGS} -o basic006.out basic006.c 2>/dev/null && \
+		./basic006.out param1 PARAM2 Param3 >/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "inline999" >> ${LOG};
 	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
