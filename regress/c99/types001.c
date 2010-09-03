@@ -21,10 +21,6 @@ int main(int *argc, char **argv)
 	double f2;
 	long double f3; 
 
-	float _Complex c1; 
-	double _Complex c2;
-	long double _Complex c3;
-
 	int T1[10];
 
 	struct {

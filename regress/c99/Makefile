@@ -13,10 +13,10 @@ REGRESS_TARGETS = arith001 arith002 \
 						basic007 \
 						comments001 \
 						conversions001 \
-						darray001 darray002 \
+						darray001 darray002 darray004 darray005 \
 						digraph001 \
 						enum001 \
-						func001 func002 func003 func004 \
+						func001 func002 func003 func004 func005 \
 						init001 init002 init003 init004 init005 init006 \
 						init007 init008 init009 init010 init011 init012 \
 						init013 init014 init015 init016 init017 init018 \
@@ -27,7 +27,7 @@ REGRESS_TARGETS = arith001 arith002 \
 						scope001 scope002 scope003 scope004 \
 						trigraph001 \
 						types001 types002 types003 types004 types005 \
-						types006 types007 types008 \
+						types006 types007 types008 types009 \
 						limits001 limits002 limits003 \
 						sizeof001 sizeof002 
 
@@ -61,6 +61,14 @@ test:
 	@${CC} ${CFLAGS} -o basic006.out basic006.c 2>/dev/null && \
 		./basic006.out param1 PARAM2 Param3 >/dev/null && \
 		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "darray003" ;
+	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c 2>/dev/null && \
+		./darray003.out >/dev/null 2>/dev/null&& \
+		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "darray999" ;
+	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c 2>/dev/null && \
+		./darray999.out >/dev/null 2>/dev/null && \
+		echo "failed" || echo "passed" ;
 	@printf  "   %-20s \t\t " "inline999" ;
 	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
 		echo "failed" || echo "passed" ;
@@ -89,6 +97,16 @@ page:
 		./basic006.out param1 PARAM2 Param3 >/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "darray003" >> ${LOG};
+	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c 2>/dev/null && \
+		./darray003.out >/dev/null  2>/dev/null&& \
+		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "darray999" >> ${LOG};
+	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c 2>/dev/null && \
+		./darray999.out >/dev/null  2>/dev/null&& \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "inline999" >> ${LOG};
 	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \

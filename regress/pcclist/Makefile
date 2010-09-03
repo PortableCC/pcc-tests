@@ -8,7 +8,7 @@ CFLAGS=
 LDFLAGS=
 LOG=pcclist.log
 
-REGRESS_TARGETS = basic001 basic003 \
+REGRESS_TARGETS = basic001 basic003 basic004 \
 						fields001 fields002 \
 						func003 func004 func005 \
 						init001 init003 init004 init005 \
@@ -16,9 +16,10 @@ REGRESS_TARGETS = basic001 basic003 \
 						prep001 \
 						scope001 \
 						strings001 strings002 \
-						types001 types002
+						types001 types002 \
+						extension001 
 
-REGRESS_TARGETS_FAIL = func999 init999 init998 init997 
+REGRESS_TARGETS_FAIL = init999 init998 init997 
 
 test:  
 	@echo " Running tests from pcc-list: "  
