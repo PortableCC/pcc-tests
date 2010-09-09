@@ -15,7 +15,7 @@ main(int argc, char *argv[])
 {
 	long l = 0;
 
-	if (l != ELFDEFNNAME(NO_ADDR)) {
+	if (l == ELFDEFNNAME(NO_ADDR)) {
 		return (1);
 	}
 	return (0);
