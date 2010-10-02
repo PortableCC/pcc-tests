@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /* c99 6.7.2.1  */ 
 struct st {
 	int a ;
