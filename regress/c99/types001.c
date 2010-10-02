@@ -37,7 +37,6 @@ int main(int *argc, char **argv)
 
 	const int const1 ;
 	volatile int volatile1; 
-	restrict int restrict1; 
 
 	if (sizeof(signed char) != sizeof(char))
 		return 1 ; 
@@ -51,8 +50,11 @@ int main(int *argc, char **argv)
 		 (sizeof(f2) >= sizeof (f3)) )
 		return 3 ;
 
+#ifdef notdef
+	/* struct member alignments are target-dependent */
 	if (sizeof(st) != (sizeof(long double) + sizeof(float) + sizeof(int)))
 		return 4; 
+#endif
 	
 	if (sizeof(un) != sizeof(long double))
 		return 5; 
