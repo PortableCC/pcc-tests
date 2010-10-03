@@ -11,9 +11,9 @@ int main(int *argc, char **argv)
 
 	fooarray[0] = myfoo;
 
-	struct foo fooarray[]={myfoo}; /* PCC doesn't allow this */
+	struct foo fooarray2[]={myfoo}; /* PCC doesn't allow this */
 
-	struct foo fooarray[]={{myfoo.x}};/* member by member, allowed by PCC*/
+	struct foo fooarray3[]={{myfoo.x}};/* member by member, allowed by PCC*/
 
 	return 0; 
 }
