@@ -1,33 +1,42 @@
 /*
- * pcc-bug 
+ * pcc-bug
  * Subject:    packed structures
  * From:       Gregory McGarry <greg () bitlynx ! com>
  *
- * While fields appear to be packed, the overall size of the structure  
+ * While fields appear to be packed, the overall size of the structure
  * isn't.
  *
- * TODO: 
- * size of struct: gcc says 8, pcc says 5  
- * I believe gcc...  
+ * TODO:
+ * handle different alignment requirements
  */
 
-//#include <stdio.h>
+#if defined(__PCC__)
+#define	__packed	_Pragma("packed")
+#elif defined(__GNUC__)
+#define	__packed	__attribute__ ((__packed__))
+#else
+#define	__packed	/* nothing */
+#endif
 
-#define __packed _Pragma("packed")
-//#define __packed __attribute__ ((__packed__))
-//#define __packed /* nothing */
+struct st0 {
+	char c;
+	int i;
+};
 
-struct st {
-         char c;
-         int i;
-} __packed t;
+struct st1 {
+	char c;
+	int i;
+} __packed;
 
 int
 main(void)
 {
-	if (sizeof(struct st) != 8 )
-		return 1; 
+	if (sizeof(struct st0) != sizeof(int) + sizeof(int))
+		return 1;
 
-	return 0 ; 
+	if (sizeof(struct st1) != sizeof(int) + sizeof(char))
+		return 1;
+
+	return 0;
 }
 
