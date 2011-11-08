@@ -67,12 +67,10 @@ test:
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "darray999" ;
 	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c >/dev/null 2>/dev/null && \
-		./darray999.out >/dev/null 2>/dev/null && \
 		echo "failed" || echo "passed" ;
 	@printf  "   %-20s \t\t " "inline999" ;
 	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
 		echo "failed" || echo "passed" ;
-
 
 page:
 	@printf  "<h2> C99 tests </h2> \n" > ${LOG}
@@ -104,7 +102,6 @@ page:
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "darray999" >> ${LOG};
 	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c >/dev/null 2>/dev/null && \
-		./darray999.out >/dev/null  2>/dev/null&& \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "inline999" >> ${LOG};
