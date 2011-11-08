@@ -62,11 +62,11 @@ test:
 		./basic006.out param1 PARAM2 Param3 >/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "darray003" ;
-	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c >/dev/null 2>/dev/null && \
 		./darray003.out >/dev/null 2>/dev/null&& \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "darray999" ;
-	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c >/dev/null 2>/dev/null && \
 		./darray999.out >/dev/null 2>/dev/null && \
 		echo "failed" || echo "passed" ;
 	@printf  "   %-20s \t\t " "inline999" ;
@@ -98,12 +98,12 @@ page:
 		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "darray003" >> ${LOG};
-	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c >/dev/null 2>/dev/null && \
 		./darray003.out >/dev/null  2>/dev/null&& \
 		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "darray999" >> ${LOG};
-	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c >/dev/null 2>/dev/null && \
 		./darray999.out >/dev/null  2>/dev/null&& \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;
