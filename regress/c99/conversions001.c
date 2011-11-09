@@ -1,5 +1,5 @@
 /* Correct - found in C99 */
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	_Bool b ; 
 	int i = 246;

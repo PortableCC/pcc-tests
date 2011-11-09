@@ -10,7 +10,7 @@ typedef unsigned char AAA, BBB() ;
 extern BBB *bbb;
 AAA aaa;
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	NEWTYPE a , *b, *c[10]; 
 

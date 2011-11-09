@@ -1,5 +1,5 @@
 /* type specifiers may occur in any order */ 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	unsigned long long int u1 ;
 	unsigned int long long u2 ;

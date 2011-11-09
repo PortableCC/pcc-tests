@@ -5,7 +5,7 @@
  * enumeration by using designators 
  *
  */
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	enum {one, two} ; 
 	const char *a[] = {

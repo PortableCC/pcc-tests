@@ -1,6 +1,6 @@
 /* this is not permitted  */
 
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 
 	int a ; 
 

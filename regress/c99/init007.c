@@ -8,7 +8,7 @@ union {
 	} st2 ; 
 } u1 ; 
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	u1.st1.a1 = 10 ; 
 	u1.st1.b1 = 10.5 ; 

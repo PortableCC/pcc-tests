@@ -2,7 +2,7 @@
 
 char *strcpy(char *, const char *);
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	char *a = "abcd"; 
 	char *b = (char []) {"abcd"};

@@ -5,7 +5,7 @@ int foo(int n){
 	return sizeof(a);
 }
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 
 	if (foo(10) != 10)

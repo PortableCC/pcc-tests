@@ -10,7 +10,7 @@ void p2(int input) {
 		exit (0); 
 }
 
-int main(int *argc,char **argv)
+int main(int argc, char *argv[])
 {
 	void (*p2f[5])(int);
 	p2f[0] = p1 ;

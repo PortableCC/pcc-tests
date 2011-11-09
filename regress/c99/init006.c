@@ -1,6 +1,6 @@
 /* correct - from c99 */
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	/* pa[2] = {1,2} */ 
 	int *pa = (int []){1,2};  

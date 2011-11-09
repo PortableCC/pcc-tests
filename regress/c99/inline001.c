@@ -8,7 +8,7 @@ int foobar(){
 	return foo() + bar() ; 
 } 
 
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 	if ( foobar() != 2)
 		return 1; 
 

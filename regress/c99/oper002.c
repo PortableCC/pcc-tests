@@ -2,7 +2,7 @@
 #include <iso646.h>
 /* c99 new header and def */ 
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	bool b1 ; 
 	bool b2 ; 

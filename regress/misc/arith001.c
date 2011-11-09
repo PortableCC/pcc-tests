@@ -1,5 +1,5 @@
 /* found somewhere, should work */
-int main(int *argc,char **argv)
+int main(int argc, char *argv[])
 {
 	int a=1,b[10]; 
 

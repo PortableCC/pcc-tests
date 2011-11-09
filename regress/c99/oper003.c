@@ -6,7 +6,7 @@ struct aaa {
 	int a2; 
 }; 
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	struct aaa A; 
 

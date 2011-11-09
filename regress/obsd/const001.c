@@ -1,5 +1,5 @@
 /*Correct - found in OBSD sources */
-int main(int *argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	char c = 0x7f;
 	short s = 0x7fff;

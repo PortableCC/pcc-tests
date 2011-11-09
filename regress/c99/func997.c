@@ -27,7 +27,7 @@ union u1 bar(){
 	return bbb ; 
 }
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int test1 = 0 ;
 	float test2 = 0;

@@ -1,5 +1,5 @@
 /* found in OpenBSD sources */
-int main(int *argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	long long foo = 10;
 	unsigned int d = 0xffffffffUL;

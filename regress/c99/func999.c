@@ -3,7 +3,7 @@ int foo(){
 	return; 
 }
 
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 	int a ;
 
 	(void) foo();

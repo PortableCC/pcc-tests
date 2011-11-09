@@ -1,6 +1,6 @@
 /* incorrect */
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	char *a ; 
 	const char **b ;

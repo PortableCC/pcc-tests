@@ -10,7 +10,7 @@ int foo(struct st1 *p1, struct st2 *p2){
 	return (p1->a);
 }
 
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 	union {
 		struct st1 s1 ;
 		struct st2 s2 ;

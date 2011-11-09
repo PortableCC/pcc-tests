@@ -1,5 +1,5 @@
 /* Correct - C99 6.9.4 */
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 	char *a = "a//b";
 	// */ 
 	int  b1 = 4,

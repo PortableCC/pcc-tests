@@ -1,7 +1,7 @@
 #include <stdbool.h>
 /* c99 new header and typedef */ 
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	bool b1 ; 
 	bool b2 ; 

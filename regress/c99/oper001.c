@@ -1,7 +1,7 @@
 /*correct - from C99*/
 #include <stdio.h>
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	void *A = NULL ; 
 

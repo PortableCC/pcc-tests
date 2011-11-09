@@ -8,7 +8,7 @@ struct st {
 	struct st *next;
 };
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	struct st *first,*n,*p;
 	int i;

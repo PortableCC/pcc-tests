@@ -15,7 +15,7 @@ void (*funp1)(void);
 F *funp2; 
 
 
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 
 	return 0;
 }

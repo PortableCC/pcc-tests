@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(int *argc,char **argv)
+int main(int argc, char *argv[])
 {
 	double f1 = 1/0.0, 
 			f2 = -1/0.0, 

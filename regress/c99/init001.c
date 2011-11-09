@@ -7,7 +7,7 @@ union un1 {
 	double e; 
 } u = { .b = 1 } ; 
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	return 0; 
 }

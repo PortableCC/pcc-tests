@@ -10,7 +10,7 @@ void bar(void){
 	goto end; 
 }
 
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 	goto foo; 
 
 end:

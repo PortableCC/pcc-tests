@@ -1,5 +1,5 @@
 /* C99 use truncation towards 0 */
-int main(int *argc,char **argv)
+int main(int argc, char *argv[])
 {
    int a = -22 / 7 ;
 	int b = -22 % 7 ;

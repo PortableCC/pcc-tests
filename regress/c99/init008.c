@@ -4,7 +4,7 @@ struct st {
 	char b ;
 };
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	struct st s1;
 

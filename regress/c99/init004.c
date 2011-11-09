@@ -12,7 +12,7 @@ T1 foo (T2 input){
 	return input*2; 
 }
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	struct st aaa; 
 	(void) foo(2); 

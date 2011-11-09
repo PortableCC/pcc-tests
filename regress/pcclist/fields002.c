@@ -13,7 +13,7 @@ struct bf {
 };
 
 int
-main(int argc, char **argv)
+main(int argc, char *argv[])
 {
 	int *p;
 	struct bf bf;

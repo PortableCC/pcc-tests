@@ -1,5 +1,5 @@
 /* C99 types */ 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	_Bool b;
 

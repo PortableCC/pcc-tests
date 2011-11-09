@@ -4,7 +4,7 @@ struct st {
 	float b[];
 };
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	struct st s1 = { 543, { 1.0 }}; // Invalid -> C99 
 

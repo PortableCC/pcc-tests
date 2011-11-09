@@ -1,6 +1,6 @@
 /* from pcc-list, confirmed as 'pcc bug' */
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	struct foo {
 		int x;

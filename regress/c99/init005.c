@@ -1,5 +1,5 @@
 /* C99 6.7.8 */
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int A[] = {1,2,3,4}; 
 	int B[3][3] = {{1,2,3},

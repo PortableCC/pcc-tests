@@ -11,7 +11,7 @@ struct st <%
 	char data[10]; 
 %> ;
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int array<:10:> ;
 

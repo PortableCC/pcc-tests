@@ -3,7 +3,7 @@ int foo(int x,int y, int z){
 	return 1;
 }
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int a = 1, 
 		 b = 1,

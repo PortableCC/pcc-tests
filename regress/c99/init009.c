@@ -11,7 +11,7 @@ int bar(struct st *p1, struct st *p2){
 	return ((p1->a + p1->b) + (p2->a + p2->b));
 }
 
-int main(int *argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int tmp1 = 0;
 	int tmp2 = 0;

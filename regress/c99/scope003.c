@@ -1,5 +1,5 @@
 /*correct*/
-int main(int *argc, char *argv[]){
+int main(int argc, char *argv[]){
 	int a = 0;  
 
 	goto a ; 

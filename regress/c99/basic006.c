@@ -2,7 +2,7 @@
 #include <string.h>
 
  /* C99 - 5.1.2.2.1 */ 
-int main(int argc, char **argv){
+int main(int argc, char *argv[]){
 	char *argv4 = "ddd" ;
 	if(argc != 4)
 		return 1; 

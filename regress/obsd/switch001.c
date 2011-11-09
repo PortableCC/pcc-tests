@@ -5,7 +5,7 @@
  * should return 0.
  */
 int
-main(int argc, char **argv)
+main(int argc, char *argv[])
 {
 	unsigned long long i = (unsigned long)~0 + (unsigned long long)2;
 
