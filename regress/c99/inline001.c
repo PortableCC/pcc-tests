@@ -1,8 +1,6 @@
 /* Correct - found in C99 (6.7.4) */
-inline int foo(){ return 1; } 
-inline int bar(){ return 1; } 
-
-extern int bar();
+static inline int foo(){ return 1; }
+extern inline int bar(){ return 1; }
 
 int foobar(){ 
 	return foo() + bar() ; 
