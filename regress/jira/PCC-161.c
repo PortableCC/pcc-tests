@@ -10,9 +10,9 @@ int fa(void){ // define fa() as no arguments
 	return 1;
 }
 
-int main(){
+int main(int argc, char *argv[])
+{
 	int a = fa(1); // PCC allows this as thinks in fa() not fa(void)
 
 	return 0;
 }
-

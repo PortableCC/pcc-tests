@@ -2,7 +2,8 @@
  * 6.26 Case ranges 
  *
  */
-int main () 
+
+int main(int argc, char *argv[])
 {
 	char c = 'd'; 
 

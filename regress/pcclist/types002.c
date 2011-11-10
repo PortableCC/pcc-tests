@@ -2,7 +2,9 @@
  * From:       TAKAHASHI Tamotsu <tamo () mutt ! no-ip ! org>
  */
 #include <stdio.h>
-int main(void) {
+
+int main(int argc, char *argv[])
+{
 	_Bool a=3;
 	printf("%d\n", a);
 	if ((a < 0) || (a > 1))

@@ -1,5 +1,6 @@
 /* c99 6.5.3.4 */
-int main ()
+
+int main(int argc, char *argv[])
 {
 	int array[42], n;
 

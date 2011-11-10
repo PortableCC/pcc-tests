@@ -14,8 +14,8 @@ struct trash2 {
 	struct trash	t;
 };
 
-int
-main() {
+int main(int argc, char *argv[])
+{
 	int	x = 1;
 	struct trash lf = { 123 };
 	struct trash lf2 = { 456 };

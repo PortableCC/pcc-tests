@@ -10,7 +10,7 @@ struct ST {
 };
 
 
-int main() 
+int main(int argc, char *argv[])
 {
 	struct ST s1 ; 
 

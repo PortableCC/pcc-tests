@@ -1,6 +1,6 @@
 /* C99 6.4.4.2 */ 
 
-int main() 
+int main(int argc, char *argv[])
 {
 	float f1 ;
 

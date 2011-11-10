@@ -17,8 +17,7 @@ getFunc(void)
 	        return func; 
 } 
 
-int 
-main(void) 
+int main(int argc, char *argv[])
 { 
 	        (*(getFunc()))("%d\n", 10); 
 	        return 0; 

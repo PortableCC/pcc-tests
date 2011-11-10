@@ -20,7 +20,7 @@ struct foo {
 int i = 16;
 struct baz { unsigned int a:2, b:4, c:32;} y = { 7, 8, 9};
 
-main()
+int main(int argc, char *argv[])
 {
 	//printf("x = %d %d %d %d %d %d\n", x.a, x.b, x.x, x.y, x.z, x.c);
 	if (  x.a != 1 || 

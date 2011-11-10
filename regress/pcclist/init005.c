@@ -1,20 +1,15 @@
 /*correct*/
 /* From Ted Unangst */
-int a() { return 1; }
 
-int f()
+int a(void) { return 1; }
+
+int main(int argc, char *argv[])
 {
 	int b = 0;
 	a() + ++b;
+
+	if (b == 0)
+		return 1;
+
 	return 0;
-}
-
-int main()
-{
-	int b = 0;
-	a() + ++b;
-	if (b == 1)
-		exit(0);
-	else
-		exit(1);
 }

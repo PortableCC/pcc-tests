@@ -10,7 +10,7 @@ struct zeros endless_zeros = { 0, &endless_zeros};
 
 void func(struct zeros st){ }
 
-int main () 
+int main(int argc, char *argv[])
 {
 	func(endless_zeros);
 	return 0;

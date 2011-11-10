@@ -2,4 +2,4 @@
 #define FUN(a) (b)
 #define FUN(b) (a)
 
-int main() {return 0; }
+int main(int argc, char *argv[]) { return 0; }

@@ -14,7 +14,8 @@
  */ 
 #include <stdio.h>
 
-int main(){
+int main(int argc, char *argv[])
+{
 	int x,y;
 	x=0;
 	y=10;

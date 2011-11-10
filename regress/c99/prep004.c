@@ -1,6 +1,6 @@
 /* 6.10.8 Predefined Macro Names */
 
-int main()
+int main(int argc, char *argv[])
 {
 	const char *s;
 	long l;

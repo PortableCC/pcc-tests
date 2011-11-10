@@ -15,8 +15,7 @@ test(const char *str)
         printf("%f %f %Lf\n", f, d, ld); 
 } 
 
-int 
-main(void) 
+int main(int argc, char *argv[])
 { 
         float f; 
         double d; 

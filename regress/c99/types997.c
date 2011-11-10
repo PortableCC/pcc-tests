@@ -11,7 +11,7 @@ struct ST {
 
 unsigned int *f3;
 
-int main() 
+int main(int argc, char *argv[])
 {
 	struct ST s1 ; 
 

@@ -10,5 +10,4 @@ F *((d))(void) {return 1;}
 int (*fp)(void) ;
 F *Fp;
 
-int main() {return 0;}
-
+int main(int argc, char *argv[]) { return 0; }

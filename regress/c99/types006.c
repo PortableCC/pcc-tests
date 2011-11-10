@@ -8,8 +8,5 @@ int fun(int (*)(int *), float(*)[]) ;
 /* result is */
 int fun(int (*)(int *), float(*)[5]) ;
 
-int main()
-{
-	return 0;
-}
+int main(int argc, char *argv[]) { return 0; }
 

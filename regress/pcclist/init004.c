@@ -10,5 +10,5 @@ extern _Pragma("tls") int variable1;
 extern _Pragma("tls") int variable1;
 int variable2;
 
-int main () {return 0;}
+int main(int argc, char *argv[]) { return 0; }
 

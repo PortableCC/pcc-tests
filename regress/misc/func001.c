@@ -12,7 +12,5 @@ int *(*xx2(int a, char b[a+3][a+x()], long (*c)(void)))(float c) {
 
 int xx3(int a, char *b); 
 int xx3(a,b)char *b;{ }
-int main() 
-{
-	return 0; 
-}
+
+int main(int argc, char *argv[]) { return 0; }

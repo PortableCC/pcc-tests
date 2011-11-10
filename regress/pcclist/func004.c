@@ -6,9 +6,9 @@
  * From:       Jesus Sanchez <zexel_ut () hotmail ! com>
  *
  * */
-#include <stdio.h>
 
-int main(){
+int main(int argc, char *argv[])
+{
 	int n=5;
 	int p1[n]; /* works on pcc and gcc */
 	int (*p2 )[]; /* works if you dont specify index*/
@@ -17,4 +17,3 @@ int main(){
 
 	return 0;
 }
-

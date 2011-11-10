@@ -31,11 +31,11 @@
  *     (use whatever -O level you like)
  */
 
-int main( void );
 int test_single( void );
 int test_double( void );
 
-int main(){
+int main(int argc, char *argv[])
+{
 	int i, j;
 
 	if ((i = test_single()))

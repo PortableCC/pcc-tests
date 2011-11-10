@@ -7,7 +7,7 @@ float abc[] = { GLUE(1,1),
 	GLUE(00,4),
 	GLUE(,) } ;
 
-int main() 
+int main(int argc, char *argv[])
 {
 	if ( abc[0] != 11) 
 		return 1; 

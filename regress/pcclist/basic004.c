@@ -7,7 +7,8 @@
  * to be cast to double in the case of missing prototype.
  */
 #include <stdlib.h>
-int main()
+
+int main(int argc, char *argv[])
 {
 	float a, b, c;
 	a = 66;

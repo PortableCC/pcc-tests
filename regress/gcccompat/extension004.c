@@ -2,7 +2,7 @@
  * 6.3 Labels as Values
  */
 
-int main() 
+int main(int argc, char *argv[])
 {
 	int a ; 
 	static void *jumptable[] = { 

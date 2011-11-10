@@ -28,8 +28,8 @@ doit(struct foo f, int print) {
 	return f;
 }
 
-int
-main() {
+int main(int argc, char *argv[])
+{
 	printf("%s\n", maketemp(123, "helhelele", 32).y);
 	doit(maketemp(123, "hello world", 456), 1);
 	printf("%d\n", doit( maketemp(123, "hello world", 456), 0 ).x);

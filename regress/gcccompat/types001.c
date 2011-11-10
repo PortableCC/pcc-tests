@@ -13,4 +13,4 @@ _Complex80 c2;
 __float80 f1 = 1.0w;
 __float128 f2 = 2.0Q;
 
-int main() {return 0;}
+int main(int argc, char *argv[]) { return 0; }

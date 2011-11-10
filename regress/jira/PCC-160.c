@@ -20,8 +20,8 @@ static inline HRESULT HRESULT_FROM_WIN32(unsigned int x)
 	    return (HRESULT)x > 0 ? ((HRESULT) ((x & 0x0000FFFF) | (7 << 16) | 0x80000000)) : (HRESULT)x; 
 } 
 
-int main () { 
-
+int main(int argc, char *argv[])
+{
 	(void) HRESULT_FROM_WIN32(1);
 
 	return 0; 

@@ -20,8 +20,7 @@
 #endif
 
 
-int
-main(void)
+int main(int argc, char *argv[])
 {
 	const CHAR *str = _T("This is the wide string");
 

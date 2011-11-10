@@ -28,8 +28,7 @@ struct st1 {
 	int i;
 } __packed;
 
-int
-main(void)
+int main(int argc, char *argv[])
 {
 	if (sizeof(struct st0) != sizeof(int) + sizeof(int))
 		return 1;

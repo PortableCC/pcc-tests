@@ -8,4 +8,4 @@ typedef int _G_int32_t __attribute__ ((__mode__ (__SI__)));
 typedef unsigned int _G_uint16_t __attribute__ ((__mode__ (__HI__))); 
 typedef unsigned int _G_uint32_t __attribute__ ((__mode__ (__SI__))); 
 
-int main() {return 0;}
+int main(int argc, char *argv[]) { return 0; }

@@ -9,4 +9,5 @@ struct foo {
 int bar[] = { 
 	        __builtin_offsetof(struct foo, a), 
 }; 
-int main() {return 0;}
+
+int main(int argc, char *argv[]) { return 0; }

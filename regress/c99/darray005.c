@@ -8,7 +8,7 @@ void add(int x,int y,int A1[x][y*x+100],int A2[x][y*x+100],int A3[x][y*x+100] )
 			A3[i][j] = A1[i][j] + A2[i][j];
 }
 
-int main() 
+int main(int argc, char *argv[])
 {
 	int a = 12, 
 		 b = 5, 

@@ -1,6 +1,6 @@
 /* C99 6.7.8 */ 
 
-int main() 
+int main(int argc, char *argv[])
 {
 	union {
 		int a ;

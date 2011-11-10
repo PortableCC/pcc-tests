@@ -7,4 +7,4 @@ _Decimal32 d1 = 1.0df;
 _Decimal64 d2 = 2.0DD;
 _Decimal128 d3 = 3.0dl;
 
-int main() {return 0;}
+int main(int argc, char *argv[]) { return 0; }

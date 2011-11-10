@@ -1,6 +1,8 @@
 /* should not issue: darray001.c, line 6: compiler error: bad conversion */
 /* From TAKAHASHI Tamotsu */
-int main(void) {
+
+int main(int argc, char *argv[])
+{
         int n=1;
         int a[1][n];
         a[0][0]=1; /* this line */

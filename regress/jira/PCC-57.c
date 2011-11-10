@@ -13,4 +13,4 @@ _Complex long double c5 = 2.2li + 1.1l + 3.3l; /* NG */
 _Complex long double c6 = 1.1l + 1.1l + 1.1l + 2.2li; /* OK */ 
 _Complex long double c7 = 2.2li + 2.2li + 2.2li + 1.1l; /* OK */ 
 
-int main(){return 0;}
+int main(int argc, char *argv[]) { return 0; }

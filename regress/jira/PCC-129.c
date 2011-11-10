@@ -12,4 +12,5 @@ void bar(void)
 { 
 	__builtin_offsetof(struct foo, b); 
 } 
-int main() {return 0;}
+
+int main(int argc, char *argv[]) { return 0; }

@@ -7,4 +7,5 @@ void f2(double (* restrict a)[5]);
 void f2(double a[restrict][5]); 
 void f2(double a[restrict 3][5]); 
 void f2(double a[restrict static 3][5]); // pcc: syntax error
-int main() {return 0;} 
+
+int main(int argc, char *argv[]) { return 0; }

@@ -1,7 +1,8 @@
 /* C99 6.5.7 
  * pointer arithmetic 
  * */ 
-int main () 
+
+int main(int argc, char *argv[])
 {
 	int a = 5 ,b = 5;
 	int arr[a][b];

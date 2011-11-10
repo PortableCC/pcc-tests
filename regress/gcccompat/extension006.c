@@ -1,7 +1,8 @@
 /*
  * 6.7 Conditionals with Omitted Operands
  */
-int main()
+
+int main(int argc, char *argv[])
 {
 	int result, x = 1, y = 2 ; 
 	

@@ -11,4 +11,5 @@ foo(long v)
 { 
 	a.a = (typeof(a.a)) v; 
 } 
-int main () {return 0;}
+
+int main(int argc, char *argv[]) { return 0; }

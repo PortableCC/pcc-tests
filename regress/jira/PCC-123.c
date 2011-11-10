@@ -16,9 +16,4 @@ static inline void legato (void)
 	potato(); 
 } 
 
-int 
-main(int ac, char *av[]) 
-{ 
-	return 0; 
-} 
-
+int main(int argc, char *argv[]) { return 0; }

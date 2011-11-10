@@ -6,8 +6,7 @@
 
 typedef int a;
 
-int
-main(void)
+int main(int argc, char *argv[])
 {
 	a b;
 
@@ -15,6 +14,3 @@ a:
 	
 	return 0;
 }
-
-
-

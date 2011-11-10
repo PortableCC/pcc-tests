@@ -1,6 +1,6 @@
 /* C99 6.4.4.1 */ 
 
-int main() 
+int main(int argc, char *argv[])
 {
 	int i1 ;
 	long int i2 ;

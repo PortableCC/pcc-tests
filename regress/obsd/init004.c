@@ -1,8 +1,7 @@
 /* Correct , from OBSD*/
 typedef int a;
 
-int
-main(void)
+int main(int argc, char *argv[])
 {
 	struct x { int a; } a;
 

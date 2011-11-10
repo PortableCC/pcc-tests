@@ -7,8 +7,7 @@ struct foo {
 	int f;
 };
 
-int
-main(void)
+int main(int argc, char *argv[])
 {
 	struct foo f;
 	int a,b; 

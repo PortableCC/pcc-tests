@@ -12,5 +12,5 @@ void fvla(int m, int C[m][m]){
 	int (*s)[m];
 	static int (*q)[m] = &B;
 }
-int main() {return 0; } 
 
+int main(int argc, char *argv[]) { return 0; }

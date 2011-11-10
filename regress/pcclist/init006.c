@@ -28,12 +28,10 @@ destructor(void)
 		exit(2); 
 }
 
-int
-main()
+int main(int argc, char *argv[])
 {
 	if (i != 1)
 		return 1; 
 
 	return 0;
 }
-

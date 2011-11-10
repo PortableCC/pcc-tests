@@ -3,8 +3,7 @@
 
 #include "lib.h"
 
-int
-main()
+int main(int argc, char *argv[])
 {
 	int ri;
 	char *str = "This is the string" ;

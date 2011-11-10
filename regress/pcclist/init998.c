@@ -4,8 +4,9 @@
  * Subject:    Crash compiling because wrong initialization of multidimensional
  * From:       Jesus Sanchez <zexel_ut () hotmail ! com>
  * */
-int main(){
 
+int main(int argc, char *argv[])
+{
 	char c[][]={"hi there"}; /* WRONG */
 	
 	return 0;

@@ -10,7 +10,8 @@ typedef struct{
 	a_struct b; 
 }foo; 
 
-int main(){ 
+int main(int argc, char *argv[])
+{
 	foo bar; 
 	int i; 
 	if(bar.b.a!=1){ 

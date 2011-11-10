@@ -1,4 +1,4 @@
-int main () 
+int main(int argc, char *argv[])
 {
 	char *a = "\a \b \f \n \r \t \v \\ \' \" \? "; 
 	char *b = "\023 \032 \02 \06"; 

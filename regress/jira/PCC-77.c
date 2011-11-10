@@ -16,8 +16,7 @@
 
 #define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
 
-int
-main()
+int main(int argc, char *argv[])
 {
     int i;
     for (i = 0; i < 256; i++)

@@ -7,15 +7,11 @@
  * compile with --fatal-warnings 
  */
 
-void foo(const char *cc){ }
+void foo(const char *cc) { }
 
 void Loop(void)
 {
 		foo(__func__);
 }
 
-
-int main(){
-	return 0;
-}
-
+int main(int argc, char *argv[]) { return 0; }

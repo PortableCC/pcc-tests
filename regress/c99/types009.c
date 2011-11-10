@@ -15,4 +15,4 @@ double _Imaginary i2;
 long double _Imaginary i3;
 #endif
 
-int main() {return 0;} 
+int main(int argc, char *argv[]) { return 0; }

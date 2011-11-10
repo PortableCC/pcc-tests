@@ -5,7 +5,8 @@
 #include <assert.h> 
 #include <stdio.h> 
 
-int main() { 
+int main(int argc, char *argv[])
+{ 
 	long l; 
 
 	l = 0x7fffffffffffffffL; /* LONG_MAX */ 
@@ -13,4 +14,5 @@ int main() {
 	if(l > 0)
 		return 1; 
 
-	return 0; } 
+	return 0;
+}

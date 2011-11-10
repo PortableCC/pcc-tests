@@ -4,6 +4,4 @@ struct bar {
 		int a;
 } __attribute__ ((__packed__));
 
-int main(){
-	return 0; 
-}
+int main(int argc, char *argv[]) { return 0; }

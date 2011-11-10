@@ -7,8 +7,7 @@ struct s {
 
 struct s v = { 0x99, {{0x100}} };
 
-int
-main()
+int main(int argc, char *argv[])
 {
 	if (v.f != 0x99)
 		errx(1, "wrong");

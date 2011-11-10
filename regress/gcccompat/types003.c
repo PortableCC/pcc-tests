@@ -38,4 +38,4 @@ _Sat unsigned _Accum a14;
 _Sat unsigned long _Accum a15;
 _Sat unsigned long long _Accum a16;
 
-int main() {return 0;}
+int main(int argc, char *argv[]) { return 0; }

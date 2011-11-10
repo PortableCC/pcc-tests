@@ -10,4 +10,4 @@ struct s {
 };
 char buf[offsetof(struct s, a[1])];
 
-int main(){return 0;}
+int main(int argc, char *argv[]) { return 0; }

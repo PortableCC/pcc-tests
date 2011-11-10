@@ -4,27 +4,26 @@
  */
 
 struct foo {
-		struct foo *f;
+	struct foo *f;
 };
 
 struct bar {
-		int i;
-			struct foo f;
+	int i;
+	struct foo f;
 };
 
 struct bar b1 = {
-		1,
-			{ &b1.f },	/* this is ok */
+	1,
+	{ &b1.f },	/* this is ok */
 };
 
 struct bar b2 = {
-		.i = 2,
-			.f = { &b2.f },	/* this is ok */
+	.i = 2,
+	.f = { &b2.f },	/* this is ok */
 };
 
 struct bar b3 = {
-		.f = { &b3.f },	/* "illegal combination of pointer and integer" */
+	.f = { &b3.f },	/* "illegal combination of pointer and integer" */
 };
 
-int main () {return 0;}
-
+int main(int argc, char *argv[]) { return 0; }

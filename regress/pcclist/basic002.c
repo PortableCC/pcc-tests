@@ -12,9 +12,4 @@ void func(void)
 	         for (;;) { }
 }
 
-int main()
-{
-	/* no need to call func */
-	return 0; 
-}
-
+int main(int argc, char *argv[]) { return 0; }

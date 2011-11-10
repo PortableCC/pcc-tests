@@ -4,7 +4,7 @@
  * - 127 nesting levels of blocks
  */
 
-int main()
+int main(int argc, char *argv[])
 {
  {
   {
@@ -260,4 +260,3 @@ int main()
  }
  return 0;
 } /* end of main */
-

@@ -7,4 +7,4 @@ struct a {
 	int i;
 } *p = { { 0 } };
 
-int main() {return 0;}
+int main(int argc, char *argv[]) { return 0; }

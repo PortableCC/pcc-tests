@@ -1,6 +1,8 @@
 #include <limits.h>
 /* C99 5.1.2.3 - integer promotions */
-int main (){
+
+int main(int argc, char *argv[])
+{
 	signed char c1 = ' ', 
 		  c2 = '!',
 		  c3;

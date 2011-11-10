@@ -9,5 +9,4 @@ int restrict *p;   /* Constraint violation. */
 /* Restrict cannot qualify pointers to functions. */
 float (* restrict f9)(void); /* Constraint violation. */
 
-int main () {return 0;}
-
+int main(int argc, char *argv[]) { return 0; }

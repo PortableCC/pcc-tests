@@ -7,7 +7,7 @@ int fun(int i){
 	return b; 
 }
 
-int main() 
+int main(int argc, char *argv[])
 {
 	if ( fun(55) != (sizeof(double) * 60))
 		return 1;

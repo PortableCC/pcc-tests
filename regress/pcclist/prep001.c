@@ -13,8 +13,7 @@
 #define MAC2(arg1, arg2)                \
 	MAC1("%d %d\n", arg1, arg2)
 
-int
-main()
+int main(int argc, char *argv[])
 {
 	MAC1("%d %d\n", 1, 2);
 	MAC2(1, 2);

@@ -7,6 +7,8 @@ struct s1 { int i; };
 struct s1 dummy(void); 
 struct s1 dummy(void) { struct s1 x1; return x1; } 
 
-int main() { 
+int main(int argc, char *argv[])
+{
 	struct s1 x1 = dummy(); 
-return 0; } 
+	return 0;
+}

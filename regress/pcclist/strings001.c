@@ -11,7 +11,7 @@ void test_func(char *s)
 	/* comment here */
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
 	char *s;
 	s = malloc(2048);
