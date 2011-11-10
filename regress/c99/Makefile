@@ -38,8 +38,9 @@ REGRESS_TARGETS_FAIL = arith999 \
 						func999 func998 func997 func996 func995 \
 						init999 init998 \
 						oper999 \
-						prep999 prep998 \
-						scope999	scope998 scope997 scope996 \
+						parse999 \
+						prep999 prep998 prep997 \
+						scope999 scope998 scope997 scope996 \
 						types999 types998 types997 types996 
 
 test:  
