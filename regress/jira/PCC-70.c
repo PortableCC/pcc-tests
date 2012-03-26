@@ -1,7 +1,8 @@
 /* 
- * PCC-70.c
+ * PCC-70
  * cpp incorrectly parses code
  */
+
 #include <sys/types.h>
 
 struct tty {
@@ -46,10 +47,7 @@ struct linesw linesw[] =
           ttyerrinput, ttyerrstart, nullmodem },
 };
 
-int
-main(int argc, char *argv[])
-{
-	return (0);
-}
-
-
+int main(int argc, char *argv[]) { return 0; }
+int nullioctl(struct tty *tp, u_long cmd, caddr_t addr, int flags, struct proc *proc) { return 0; }
+int nullmodem(struct tty *tp, int flag) { return 0; }
+int enodev(void) { return 0; }
