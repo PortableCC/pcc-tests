@@ -46,8 +46,8 @@ int main(int argc, char *argv[])
 		 (sizeof(s4) != sizeof(u4)) || 
 		 (sizeof(s5) != sizeof(u5)) )
 		return 2 ;
-	if ((sizeof(f1) >= sizeof (f2)) ||
-		 (sizeof(f2) >= sizeof (f3)) )
+	if ((sizeof(f1) > sizeof (f2)) ||
+		 (sizeof(f2) > sizeof (f3)) )
 		return 3 ;
 
 #ifdef notdef
