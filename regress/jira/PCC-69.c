@@ -2,7 +2,7 @@
  * PCC-69 
  * cpp processes code incorrectly
  */
-#include <sys/types.h>
+#include <stdint.h>
 
 #define ELF32_NO_ADDR	((uint32_t) ~0)	/* Indicates addr. not yet filled in */
 #define ELFSIZE 32
