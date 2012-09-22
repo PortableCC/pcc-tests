@@ -5,6 +5,8 @@
 
 int main(int argc, char *argv[])
 {
+
+#ifndef __vax__
 	double f1 = 1/0.0, 
 			f2 = -1/0.0, 
 			f3 = 0.0/0.0, 
@@ -30,6 +32,7 @@ int main(int argc, char *argv[])
 	//printf("f5:%f\n",f5);
 	if ( ! isnan(f5) )
 		return 5; 
+#endif
 
 	return 0;
 }
