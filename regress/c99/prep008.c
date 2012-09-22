@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		return 1; 
 	if ( abc[4] != 004) 
 		return 1; 
-	if ( abc[5] != 0) 
+	if ( sizeof(abc)/sizeof(float) != 5) 
 		return 1; 
 
 	return 0; 
