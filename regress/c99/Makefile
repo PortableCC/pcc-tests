@@ -55,7 +55,7 @@ test:
 	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
 	do \
 		printf  "   %-20s \t\t " "$$TARGET2" ;\
-		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
+		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null 1>&2 && \
 			echo "failed" || echo "passed" ;\
 	done 
 	@printf  "   %-20s \t\t " "basic006" ;
@@ -63,14 +63,14 @@ test:
 		./basic006.out param1 PARAM2 Param3 >/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "darray003" ;
-	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c >/dev/null 2>/dev/null && \
+	@${CC} ${CFLAGS} -o darray003.out darray003.c darray003_p2.c 2>/dev/null 1>&2 && \
 		./darray003.out >/dev/null 2>/dev/null&& \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "darray999" ;
 	@${CC} ${CFLAGS} -o darray999.out darray999.c darray999_p2.c >/dev/null 2>/dev/null && \
 		echo "failed" || echo "passed" ;
 	@printf  "   %-20s \t\t " "inline999" ;
-	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -c inline999.out inline999.c 2>/dev/null 1>&2 && \
 		echo "failed" || echo "passed" ;
 
 page:
