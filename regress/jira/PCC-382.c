@@ -7,6 +7,7 @@
 
 int main(int argc, char *argv[])
 {
+#ifndef __vax__
 	double d;
 	float f;
 
@@ -17,6 +18,6 @@ int main(int argc, char *argv[])
 	d = -0.0;
 	if (signbit(d) == 0)
 		return 1;
-
+#endif
 	return 0;
 }
