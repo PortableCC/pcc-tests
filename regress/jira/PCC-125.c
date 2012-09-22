@@ -7,12 +7,13 @@
 
 int main(int argc, char *argv[])
 { 
+#ifdef __amd64__
 	long l; 
 
 	l = 0x7fffffffffffffffL; /* LONG_MAX */ 
 	printf("%ld\n", l); 
-	if(l > 0)
+	if(l <= 0)
 		return 1; 
-
+#endif
 	return 0;
 }
