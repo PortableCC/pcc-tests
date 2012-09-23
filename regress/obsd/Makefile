@@ -19,14 +19,14 @@ test:
 	@for TARGET in ${REGRESS_TARGETS} ;\
 	do \
 		printf  "   %-20s \t\t " "$$TARGET" ;\
-		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
+		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null 1>&2 && \
 			./$$TARGET.out >/dev/null && \
 			echo "passed" || echo "failed" ;\
 	done 
 	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
 	do \
 		printf  "   %-20s \t\t " "$$TARGET2" ;\
-		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
+		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null 1>&2 && \
 			echo "failed" || echo "passed" ;\
 	done 
 
