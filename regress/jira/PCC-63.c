@@ -1,4 +1,4 @@
-/* PCC-64 
+/* PCC-63 
  * ICE on OpenBSD/amd64
  */
 
