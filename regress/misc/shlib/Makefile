@@ -20,7 +20,7 @@ static_lib:
 
 static:	
 	@${MAKE} static_lib
-	@${CC} -Wall -o static main.c lib.a
+	@${CC} -Wall -o static main.c lib.a >/dev/null 2>/dev/null
 
 static_check: 
 	@${MAKE} static
