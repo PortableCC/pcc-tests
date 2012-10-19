@@ -43,7 +43,7 @@ test:
 	@${CC} ${CFLAGS} -Wc,-xtemps,-xinline -o func001.out func001.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "func002" ;
-	@${CC} ${CFLAGS} --fatal-warnings -o func002.out func002.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -Wl,--fatal-warnings -o func002.out func002.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "init002" ;
 	@${CC} ${CFLAGS} -fPIC -fstack-protector -o init002.out init002.c 2>/dev/null && \
@@ -77,7 +77,7 @@ page:
 		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func002 " >> ${LOG} ;
-	@${CC} ${CFLAGS} --fatal-warnings -o func002.out func002.c 2>/dev/null && \
+	@${CC} ${CFLAGS} -Wl,--fatal-warnings -o func002.out func002.c 2>/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " init002 " >> ${LOG} ;
