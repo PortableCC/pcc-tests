@@ -12,7 +12,7 @@ int fa(void){ // define fa() as no arguments
 
 int main(int argc, char *argv[])
 {
-	int a = fa(1); // PCC allows this as thinks in fa() not fa(void)
+	int a = fa(1); // too many arguments used
 
 	return 0;
 }
