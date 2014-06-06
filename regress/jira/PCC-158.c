@@ -1,6 +1,6 @@
 /* 
  * PCC-158
- *  pcc does not support the attribute "allways_inline"
+ *  pcc does not support the attribute "always_inline"
  *
  */
 struct _TEB;
