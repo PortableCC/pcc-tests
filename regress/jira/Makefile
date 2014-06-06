@@ -15,11 +15,12 @@ REGRESS_TARGETS =	PCC-21 PCC-23 PCC-33 PCC-45 PCC-47 PCC-57 \
 			PCC-154 PCC-155 PCC-157 PCC-158 PCC-159 \
 			PCC-160 PCC-165 PCC-169 PCC-170 PCC-176 PCC-179 \
 			PCC-180 PCC-182 PCC-183 PCC-185 PCC-187 PCC-189 \
-			PCC-190 \
+			PCC-190 PCC-191 PCC-192 PCC-193 PCC-195 PCC-196 \
+			PCC-197 PCC-200 \
 			PCC-376 PCC-377 PCC-378 \
 			PCC-380 PCC-382 PCC-383 PCC-385
 
-REGRESS_O2_TARGETS =	PCC-177 PCC-178 PCC-184
+REGRESS_O2_TARGETS =	PCC-177 PCC-178 PCC-184 PCC-194
 
 REGRESS_PIC_TARGETS =	PCC-186
 
@@ -48,10 +49,10 @@ test:
 			./$$TARGET.out >/dev/null && \
 			echo "passed" || echo "failed" ;\
 	done 
-	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
+	@for TARGET in ${REGRESS_TARGETS_FAIL} ;\
 	do \
-		printf  "   %-20s \t\t " "$$TARGET2" ;\
-		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null 1>&2 && \
+		printf  "   %-20s \t\t " "$$TARGET" ;\
+		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null 1>&2 && \
 			echo "failed" || echo "passed" ;\
 	done 
 
@@ -84,10 +85,10 @@ page:
 			printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
 			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;\
 	done
-	@for TARGET2 in ${REGRESS_TARGETS_FAIL} ;\
+	@for TARGET in ${REGRESS_TARGETS_FAIL} ;\
 	do \
-		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "$$TARGET2" >> ${LOG} ;\
-		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
+		printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" "$$TARGET" >> ${LOG} ;\
+		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
 			printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} || \
 			printf "<td align=\"center\" bgcolor=\"green\"> %s </td></tr>\n" "passed" >> ${LOG} ;\
 	done
