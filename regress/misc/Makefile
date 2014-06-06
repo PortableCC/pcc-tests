@@ -10,6 +10,7 @@ LOG=misc.log
 MAKE=make
 
 REGRESS_TARGETS = arith001 \
+						ucn001	\
 						func001 
 
 REGRESS_TARGETS_FAIL = 
