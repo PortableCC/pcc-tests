@@ -9,9 +9,7 @@ LDFLAGS=
 LOG=misc.log
 MAKE=make
 
-REGRESS_TARGETS = arith001 \
-						ucn001	\
-						func001 
+REGRESS_TARGETS = arith001 char001 func001 str001 ucn001
 
 REGRESS_TARGETS_FAIL = 
 
