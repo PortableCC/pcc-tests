@@ -2,8 +2,10 @@
  * ICE on OpenBSD/amd64
  */
 
+#ifdef __OpenBSD__
 #ifndef _KERNEL 
 #define _KERNEL 
+#endif 
 #endif 
 
 #include <sys/cdefs.h> 
