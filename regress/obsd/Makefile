@@ -9,8 +9,10 @@ LDFLAGS=
 LOG=obsd.log
 
 REGRESS_TARGETS = arith001 const001 darray001 enum001 \
-						init001 init002 init003 init004 \
-						switch001
+		init001 init002 init004 \
+		switch001
+
+IGNORE = init003
 
 REGRESS_TARGETS_FAIL = init999 switch999 switch998 
 

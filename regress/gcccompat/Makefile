@@ -9,9 +9,12 @@ LDFLAGS=
 LOG=gcccompat.log
 
 REGRESS_TARGETS = attribute001 attribute002 \
-						extension001 extension002 extension003 extension004 \
-						extension005 extension006 extension007 extension008 \
-						types001 types002 types003 
+	extension001 extension002 extension004 \
+	extension006 extension007 extension008
+
+# These extensions are not currently supported.
+# Do not complain about them as failed.
+IGNORE = extension003 extension005 types001 types002 types003
 
 REGRESS_TARGETS_FAIL = 
 

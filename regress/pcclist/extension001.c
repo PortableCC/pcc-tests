@@ -5,9 +5,11 @@
  * Message-ID: 20100901181925.GA27791 () port70 ! net
  */
 
+int g(){ return 1; }
+
 int f(){
-	int i = ({f();}); // pcc: operands of = have incompatible types
-	int j = ({f(); f();}); // works fine
+	int i = ({g();}); // pcc: operands of = have incompatible types
+	int j = ({g(); g();}); // works fine
 
 	return 0;
 }
