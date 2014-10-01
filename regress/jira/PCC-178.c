@@ -3,6 +3,7 @@
  * register miscounting on i386?
  */
 
+#if defined(__i386__) || defined(__amd64__)
 static inline unsigned short __ntohs (unsigned short x)
 {
 	__asm__ ("xchgb %b0, %h0"
@@ -26,6 +27,7 @@ foo(unsigned short p)
 
 	p = __ntohs(p);
 }
+#endif
 
 int main(int argc, char *argv[]) { return 0; }
 
