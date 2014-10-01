@@ -4,13 +4,8 @@
  */
 #include <stdio.h>
 
-#ifdef __PCC__
-#define __constructor _Pragma("constructor")
-#define __destructor _Pragma("destructor")
-#else
 #define __constructor __attribute ((constructor))
 #define __destructor __attribute ((destructor))
-#endif
 
 int i = 0 ;
 
