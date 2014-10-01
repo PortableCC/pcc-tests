@@ -7,6 +7,7 @@ void mmx_zero_reg(void) { }
 
 typedef unsigned char uint8_t;
 
+#if defined(__i386__) || defined(__amd64__)
 static __attribute__ ((__always_inline__))
 void MC_put_mmx(const int width, int height, uint8_t *dest, const uint8_t *ref, const int stride)
 {
@@ -25,5 +26,6 @@ void MC_put_mmx(const int width, int height, uint8_t *dest, const uint8_t *ref, 
 	ref += stride;
     } while (--height);
 }
+#endif
 
 int main(int argc, char *argv[]) { return 0; }
