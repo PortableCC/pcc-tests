@@ -7,6 +7,12 @@
 
 #include <stdio.h>
 
+#if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
+#define V 0xff00ffff
+#else
+#define V 0xffff00ff
+#endif
+
 struct bf {
 	signed int a : 8;
 	signed char b : 8;
@@ -23,7 +29,7 @@ main(int argc, char *argv[])
 	bf.a = -1;
 	bf.b = 0;
 	//printf("%.8x\n", *p);
-	if (*p != 0xffff00ff)
+	if (*p != V)
 		return 1; 
 
 
