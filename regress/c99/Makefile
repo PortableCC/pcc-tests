@@ -10,7 +10,7 @@ LOG=c99.log
 
 REGRESS_TARGETS = arith001 arith002 \
 	basic001 basic002 basic003 basic004 basic005 basic007 \
-	comments001 \
+	basic008 comments001 \
 	conversions001 \
 	darray001 darray002 darray004 darray005 \
 	digraph001 \
