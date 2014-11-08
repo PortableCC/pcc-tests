@@ -8,7 +8,7 @@ CFLAGS=
 LDFLAGS=
 LOG=pcclist.log
 
-REGRESS_TARGETS = basic001 basic003 basic004 \
+REGRESS_TARGETS = basic001 basic003 basic004 basic005 \
 						fields001 fields002 \
 						func003 func004 func005 \
 						init001 init003 init004 init005 \
