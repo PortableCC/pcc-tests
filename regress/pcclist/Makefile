@@ -9,15 +9,16 @@ LDFLAGS=
 LOG=pcclist.log
 
 REGRESS_TARGETS = basic001 basic003 basic004 basic005 \
-						fields001 fields002 \
-						func003 func004 func005 \
-						init001 init003 init004 init005 \
-						init006 init007 init008 \
-						prep001 \
-						scope001 \
-						strings001 strings002 \
-						types001 types002 \
-						extension001 
+		fields001 fields002 \
+		func003 func004 func005 \
+		init001 init003 init004 init005 \
+		init006 init007 init008 \
+		prep001 prep002 prep003 prep004 prep005 prep006 prep007 \
+		prep008 prep009 prep010 prep011 \
+		scope001 \
+		strings001 strings002 \
+		types001 types002 \
+		extension001 
 
 REGRESS_TARGETS_FAIL = init999 init998 init997 
 
