@@ -8,13 +8,16 @@ CFLAGS=
 LDFLAGS=
 LOG=pcclist.log
 
-REGRESS_TARGETS = basic001 basic003 basic004 basic005 \
+REGRESS_TARGETS = asm001 \
+		attr001 attr002 \
+		basic001 basic003 basic004 basic005 \
+		builtin001 builtin002 \
 		fields001 fields002 \
-		func003 func004 func005 \
-		init001 init003 init004 init005 \
-		init006 init007 init008 \
+		func003 func004 func005 func006 \
+		init001 init003 init004 init005 init006 init007 init008 \
+		init009 init010 \
 		prep001 prep002 prep003 prep004 prep005 prep006 prep007 \
-		prep008 prep009 prep010 prep011 \
+		prep008 prep009 prep010 prep011 prep012 prep013 \
 		scope001 \
 		strings001 strings002 \
 		types001 types002 \
@@ -39,6 +42,9 @@ test:
 	done 
 	@printf  "   %-20s \t\t " "basic002" ;
 	@${CC} ${CFLAGS} -fpic -O -S -o basic002.out basic002.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "basic006" ;
+	@${CC} ${CFLAGS} -Wc,-xinline -o basic006.out basic006.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "func001" ;
 	@${CC} ${CFLAGS} -Wc,-xtemps,-xinline -o func001.out func001.c 2>/dev/null && \
@@ -71,6 +77,10 @@ page:
 	done
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " basic002 " >> ${LOG} ;
 	@${CC} ${CFLAGS} -fpic -O -S -o basic002.out basic002.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " basic006 " >> ${LOG} ;
+	@${CC} ${CFLAGS} --Wc,-xinline -o basic006.out basic006.c 2>/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func001 " >> ${LOG} ;
