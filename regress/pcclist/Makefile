@@ -8,14 +8,14 @@ CFLAGS=
 LDFLAGS=
 LOG=pcclist.log
 
-REGRESS_TARGETS = asm001 \
-		attr001 attr002 \
-		basic001 basic003 basic004 basic005 \
+REGRESS_TARGETS = asm001 asm002 \
+		attr001 attr002 attr003 \
+		basic001 basic003 basic004 basic005 basic007 \
 		builtin001 builtin002 \
 		fields001 fields002 \
 		func003 func004 func005 func006 \
 		init001 init003 init004 init005 init006 init007 init008 \
-		init009 init010 \
+		init009 init010 init011 \
 		prep001 prep002 prep003 prep004 prep005 prep006 prep007 \
 		prep008 prep009 prep010 prep011 prep012 prep013 \
 		scope001 \
@@ -51,6 +51,9 @@ test:
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "func002" ;
 	@${CC} ${CFLAGS} -Wl,--fatal-warnings -o func002.out func002.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "func007" ;
+	@${CC} ${CFLAGS} -Werror -Wc,-xtemps,-xinline -o func007.out func007.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
 	@printf  "   %-20s \t\t " "init002" ;
 	@${CC} ${CFLAGS} -fPIC -fstack-protector -o init002.out init002.c 2>/dev/null && \
@@ -89,6 +92,10 @@ page:
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func002 " >> ${LOG} ;
 	@${CC} ${CFLAGS} -Wl,--fatal-warnings -o func002.out func002.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func007 " >> ${LOG} ;
+	@${CC} ${CFLAGS} -Werror -Wc,-xtemps,-xinline -o func007.out func007.c 2>/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " init002 " >> ${LOG} ;
