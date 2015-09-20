@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		return 1;
 
 	l = __STDC_VERSION__;
-	if (l != 199901L) // C99
+	if (l != 201112L && l != 199901L) // C11 || C99
 		return 1;
 
 // 2. The following macro names are conditionally defined by the implementation:
