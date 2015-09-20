@@ -8,7 +8,9 @@
 
 void foo(void)
 {
+#ifdef __i386__
 	asm("lcall $0x7fff,$0x0");
+#endif
 }
 
 int main(int argc, char *argv[]) { return 0; }
