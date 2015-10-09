@@ -17,7 +17,8 @@ REGRESS_TARGETS = asm001 asm002 \
 		init001 init003 init004 init005 init006 init007 init008 \
 		init009 init010 init011 init012 init013 \
 		prep001 prep002 prep003 prep004 prep005 prep006 prep007 \
-		prep008 prep009 prep010 prep011 prep012 prep013 \
+		prep008 prep009 prep010 prep011 prep012 prep013 prep014 \
+		prep015 prep016 prep017 \
 		scope001 \
 		strings001 strings002 \
 		types001 types002 \
@@ -61,6 +62,10 @@ test:
 	@printf  "   %-20s \t\t " "attr004" ;
 	@${CC} ${CFLAGS} -fPIC -o attr004.out attr004.c 2>/dev/null && \
 		echo "passed" || echo "failed" ;
+	@printf  "   %-20s \t\t " "func008" ;
+	@${CC} ${CFLAGS} -fPIC -o func008.out func008.c 2>/dev/null && \
+		echo "passed" || echo "failed" ;
+
 
 
 page:
@@ -107,6 +112,10 @@ page:
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " attr004 " >> ${LOG} ;
 	@${CC} ${CFLAGS} -fPIC -o attr004.out attr004.c 2>/dev/null && \
+		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
+		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
+	@printf  "<tr><td bgcolor=\"#dcdcdc\"> %s </td>" " func008 " >> ${LOG} ;
+	@${CC} ${CFLAGS} -fPIC -o func008.out func008.c 2>/dev/null && \
 		printf "<td align=\"center\" bgcolor=\"green\" > %s </td></tr>\n" "passed" >> ${LOG} || \
 		printf "<td align=\"center\" bgcolor=\"red\" > %s </td></tr>\n" "failed" >> ${LOG} ;
 	@printf "</table>\n" >> ${LOG}
