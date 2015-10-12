@@ -10,6 +10,7 @@ LOG=misc.log
 MAKE=make
 
 REGRESS_TARGETS = arith001 char001 func001 str001 ucn001
+PIC_TARGETS = pic001
 
 REGRESS_TARGETS_FAIL = 
 
@@ -27,6 +28,17 @@ test:
 		printf  "   %-20s \t\t " "$$TARGET2" ;\
 		${CC} ${CFLAGS} -o $$TARGET2.out $$TARGET2.c 2>/dev/null && \
 			echo "failed" || echo "passed" ;\
+	done 
+	@for TARGET in ${PIC_TARGETS} ;\
+	do \
+		printf  "   %-20s \t\t " "$$TARGET" ;\
+		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
+			./$$TARGET.out >/dev/null && \
+			echo "passed" || echo "failed" ;\
+		printf  "   %-20s \t\t " "$$TARGET(PIC)" ;\
+		${CC} ${CFLAGS} -fpic -o $$TARGET.out $$TARGET.c 2>/dev/null && \
+			./$$TARGET.out >/dev/null && \
+			echo "passed" || echo "failed" ;\
 	done 
 	@cd shlib && ${MAKE} clean 
 	@printf  "   %-20s \t\t " "shlib1" ;
