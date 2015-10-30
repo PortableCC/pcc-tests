@@ -14,4 +14,4 @@ int bar(int a)
 
 int main(int argc, char *argv[]) { return 0; }
 
-int foo() { return 0; }
+int foo(int a) { return 0; }
