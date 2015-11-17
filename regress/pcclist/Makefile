@@ -16,9 +16,10 @@ REGRESS_TARGETS = asm001 asm002 \
 		func003 func004 func005 func006 \
 		init001 init003 init004 init005 init006 init007 init008 \
 		init009 init010 init011 init012 init013 \
+		pragma001 \
 		prep001 prep002 prep003 prep004 prep005 prep006 prep007 \
 		prep008 prep009 prep010 prep011 prep012 prep013 prep014 \
-		prep015 prep016 prep017 \
+		prep015 prep016 prep017 prep018 prep019 prep020 \
 		scope001 \
 		strings001 strings002 \
 		types001 types002 \
