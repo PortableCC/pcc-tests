@@ -12,6 +12,8 @@ REGRESS_TARGETS = attribute001 attribute002 \
 	extension001 extension002 extension004 \
 	extension006 extension007 extension008
 
+OPT_REGRESS_TARGETS = typeof001
+
 # These extensions are not currently supported.
 # Do not complain about them as failed.
 IGNORE = extension003 extension005 types001 types002 types003
@@ -24,6 +26,13 @@ test:
 	do \
 		printf  "   %-20s \t\t " "$$TARGET" ;\
 		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null 1>&2 && \
+			./$$TARGET.out >/dev/null && \
+			echo "passed" || echo "failed" ;\
+	done 
+	@for TARGET in ${OPT_REGRESS_TARGETS} ;\
+	do \
+		printf  "   %-20s \t\t " "$$TARGET" ;\
+		${CC} ${CFLAGS} -O2 -o $$TARGET.out $$TARGET.c 2>/dev/null 1>&2 && \
 			./$$TARGET.out >/dev/null && \
 			echo "passed" || echo "failed" ;\
 	done 
