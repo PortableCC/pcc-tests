@@ -30,8 +30,11 @@ int main(int argc, char *argv[])
 		n->next = NULL ;
 	}
 
-	for (p = first ; p ; p=p->next){
-		free(p);
+	p = first ;
+	while (p) {
+		n = p;
+		p = p->next;
+		free(n);
 	}
 
 	return 0; 
