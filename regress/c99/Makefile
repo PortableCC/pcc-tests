@@ -8,13 +8,14 @@ CFLAGS= -lm
 LDFLAGS=
 LOG=c99.log
 
-REGRESS_TARGETS = arith001 arith002 \
+REGRESS_TARGETS = arith001 arith002 arith003 \
 	basic001 basic002 basic003 basic004 basic005 basic007 \
 	basic008 comments001 \
 	conversions001 \
 	darray001 darray002 darray004 darray005 \
 	digraph001 \
 	enum001 \
+	fpoint001 \
 	func001 func002 func003 func004 func005 \
 	init001 init002 init003 init004 init005 init006 \
 	init007 init008 init009 init010 init011 init012 \
