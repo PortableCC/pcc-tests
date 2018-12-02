@@ -116,6 +116,9 @@ int main(int argc, char *argv[])
 		PRINT(("soft_fp2int2\n"));
 	return 0;
 }
+float fy1 = 0x7fffffffffffffffLL;
+double fy2 = 0x7fffffffffffffffLL;
+long double fy3 = 0x7fffffffffffffffLL;
 
 double dd1 = 2.0+1.0;
 double dd2 = 2.0e10+1.0e8;
