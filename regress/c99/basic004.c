@@ -8,6 +8,14 @@ struct st {
 	struct st *next;
 };
 
+struct softfloat {
+	union {
+		int fp[4]; 
+	};
+} A;
+
+int z(struct softfloat f) { return 0; }
+
 int main(int argc, char *argv[])
 {
 	struct st *first,*n,*p;
@@ -36,6 +44,7 @@ int main(int argc, char *argv[])
 		p = p->next;
 		free(n);
 	}
-
+	z(A);
 	return 0; 
 }
+
