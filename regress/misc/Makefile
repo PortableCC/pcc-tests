@@ -10,6 +10,7 @@ LOG=misc.log
 MAKE=make
 
 REGRESS_TARGETS = arith001 char001 func001 str001 ucn001 array001
+OPTIM_TARGETS = optim001
 PIC_TARGETS = pic001
 
 REGRESS_TARGETS_FAIL = 
@@ -20,6 +21,13 @@ test:
 	do \
 		printf  "   %-20s \t\t " "$$TARGET" ;\
 		${CC} ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
+			./$$TARGET.out >/dev/null && \
+			echo "passed" || echo "failed" ;\
+	done 
+	@for TARGET in ${OPTIM_TARGETS} ;\
+	do \
+		printf  "   %-20s \t\t " "$$TARGET" ;\
+		${CC} -O ${CFLAGS} -o $$TARGET.out $$TARGET.c 2>/dev/null && \
 			./$$TARGET.out >/dev/null && \
 			echo "passed" || echo "failed" ;\
 	done 
