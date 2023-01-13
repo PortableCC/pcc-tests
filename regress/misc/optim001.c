@@ -23,5 +23,5 @@ char *ttyname(int a){return ttyn; }
 
 int SAVE(char *c){ return 43;}
 
-set(char *c, int a) { if (a != 43) printf("error 43\n"); exit(1); }
+set(char *c, int a) { if (a != 43) { printf("error 43\n"); exit(1); } }
 
