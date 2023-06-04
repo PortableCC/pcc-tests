@@ -13,9 +13,9 @@ REGRESS_TARGETS = asm001 asm002 \
 		basic001 basic003 basic004 basic005 basic007 \
 		builtin001 builtin002 \
 		fields001 fields002 \
-		func003 func004 func005 func006 \
+		func003 func004 func005 func006 func009 \
 		init001 init003 init004 init005 init006 init007 init008 \
-		init009 init010 init011 init012 init013 \
+		init009 init010 init011 init012 init013 init014 \
 		pragma001 \
 		prep001 prep002 prep003 prep004 prep005 prep006 prep007 \
 		prep008 prep009 prep010 prep011 prep012 prep013 prep014 \
