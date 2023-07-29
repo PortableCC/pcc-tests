@@ -47,6 +47,15 @@ float fnan = __builtin_nanf("");
 float fzero = 0.0f;
 /* endif IEEE */
 
+double mxif = (-0x7fffffffffffffffLL-1);
+double mxid = (-0x7fffffffffffffffLL-1);
+long double mxild = (-0x7fffffffffffffffLL-1);
+
+long double xldinf = 0x1.1p77777;
+double xdinf = 0x1.1p77777;
+float xfinf = 0x1.1p77777;
+long double d = (0x1p-16382L / 3.L) / 3.L;
+
 #define	Z(cmp, e1, e2, e3, e4, e5)				\
 	if ((1.0000000 cmp 1.0000000) == !e1) exit(1);		\
 	if ((1.0000000 cmp 1.0000001) == !e2) exit(1);		\
