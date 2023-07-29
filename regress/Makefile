@@ -11,6 +11,7 @@ DATE=`date`
 
 test:  
 	@cd c99 && make test 
+	@cd c23 && make test 
 	@cd gcccompat && make test 
 	@cd jira && make test 
 	@cd obsd && make test 
