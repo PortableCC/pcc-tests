@@ -10,7 +10,7 @@ LOG=misc.log
 MAKE=make
 
 REGRESS_TARGETS = arith001 char001 func001 str001 ucn001 array001
-OPTIM_TARGETS = optim001
+OPTIM_TARGETS = optim001 optim002
 PIC_TARGETS = pic001
 
 REGRESS_TARGETS_FAIL = 
